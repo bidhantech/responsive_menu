@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Menu</title>
+</head>
+
+<body>
+
+    <nav class="branding">
+        <!-- menu for desktop -->
+        <section class="container">
+            <h1 class="logo">BRAND</h1>
+            <ul class="desktop" id="ul">
+                <li><a href=#>Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </section>
+
+
+        <!-- menu for tablet & smartphones-->
+        <section class="container-mobile">
+            <h1 class="logo">BRAND</h1>
+            <img class="icon" id="menu-mobile" src="menu-icon.png" />
+            <ul class="menu-m" id="ul-mobile">
+                <li class="exit-icon"><img class="icon-exit" id="exit" src="exit.png"></li>
+                <li><a href=#>Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </section>
+    </nav>
+
+
+
+    <script>
+        /* Mobile menu show */
+        document.getElementById("menu-mobile").addEventListener("click", () => {
+            document.getElementById("ul-mobile").style="display : unset;";
+            document.getElementById("exit").style="display: unset;";
+            document.getElementsByClassName("icon")[0].style="display: none;";
+        });
+
+        /* Mobile menu hidden */
+        document.getElementById("exit").addEventListener("click", () => {
+            document.getElementById("ul-mobile").style="display: none;";
+            document.getElementById("exit").style="display: none;";
+            document.getElementsByClassName("icon")[0].style="display: unset;";
+        });
+    </script>
+
+
+</body>
+
+</html>
